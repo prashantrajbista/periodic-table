@@ -1,4 +1,5 @@
 import data from './data/elements.json' with { type: 'json' }
+import photos from './data/photos.json' with { type: 'json' }
 
 export type Element = { z: number; s: string; name: string; mass: string; config: string; en: number | null; radius: number | null; ie: number | null; ea: number | null; ox: string; state: string; mp: number | null; bp: number | null; density: number | null; group: string; year: string; row: number; col: number }
 
@@ -15,14 +16,15 @@ function place(z: number): [number, number] {
 export const ELEMENTS: Element[] = (data as Omit<Element, 'row' | 'col'>[]).map(e => { const [row, col] = place(e.z); return { ...e, row, col } })
 export const BY: Record<string, Element> = Object.fromEntries(ELEMENTS.map(e => [e.s, e]))
 
-/** Photo file and alt text. From images-of-elements.com, CC BY 3.0. */
-export const PHOTO: Record<string, [string, string]> = {
-  Na: ['sodium', 'Sodium metal kept under oil in a glass vial'], Cl: ['chlorine', 'Yellow liquefied chlorine in a sealed glass ampoule'], Mg: ['magnesium', 'Magnesium crystals'],
-  Al: ['aluminium', 'Crumpled aluminium foil'], S: ['sulfur', 'Yellow sulfur crystals'], Fe: ['iron', 'Pieces of iron'], Cu: ['copper', 'Native copper nugget'],
-  Br: ['bromine', 'Bromine liquid and vapour in a sealed ampoule'], I: ['iodine', 'Iodine crystals'], Hg: ['mercury', 'Liquid mercury in a dish'], Ne: ['neon', 'Neon glowing in an electric discharge'],
+export type Photo = { alt: string; kind: 'element' | 'glow' | 'related'; by: string; lic: string; licUrl: string; page: string; file: string }
+/** One real photograph per element where a usable one exists. `glow` is a gas discharge, `related` is not the pure element. */
+export const PHOTO = photos as Record<string, Photo>
+export const photo = (s: string) => `./photos/${PHOTO[s].file}.jpg`
+export const thumb = (s: string) => `./photos/t/${PHOTO[s].file}.jpg`
+export function Credit({ s }: { s: string }) {
+  const p = PHOTO[s]
+  return <span className="small">Photo: <a href={p.page}>{p.by}</a>, {p.licUrl ? <a href={p.licUrl}>{p.lic}</a> : p.lic}</span>
 }
-export const photo = (s: string) => `./photos/${PHOTO[s][0]}.jpg`
-export const credit = (s: string) => `https://images-of-elements.com/${PHOTO[s][0]}.php`
 
 /** Families in reading order, with tile colours that all carry dark text. */
 export const FAMILIES: Record<string, { plural: string; color: string }> = {

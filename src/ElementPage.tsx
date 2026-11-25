@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BENCH, REACTIONS } from './chem/reactions.ts'
-import { BY, F, config, credit, PHOTO, photo, predicted, stateAt, type Element } from './elements.tsx'
-import { facts } from './TablePage.tsx'
+import { BY, config, Credit, F, PHOTO, photo, stateAt, predicted, type Element } from './elements.tsx'
+import { facts, noPhoto } from './TablePage.tsx'
 import { GL, SampleStage } from './gl.tsx'
 
 // Subshell filling for boxes: noble-gas cores are expanded so every electron is shown.
@@ -25,19 +25,20 @@ export function ElementPage({ e }: { e: Element }) {
   const rx = Object.values(REACTIONS).filter(r => r.id.split('+').includes(e.s))
   const bx = boxes(e), outer = bx.slice(-3), top = bx.reduce((m, b) => (b.n[0] > m ? b.n[0] : m), '0')
   const hasState = e.mp != null && e.bp != null && e.bp > e.mp
-  const max = hasState ? Math.ceil((e.bp! * 1.2) / 50) * 50 : 0
+  const max = hasState ? Math.max(350, Math.ceil((e.bp! * 1.2) / 50) * 50) : 0
   const pc = (v: number) => `${(100 * v) / max}%`
   return (
     <main className="cols elem">
       <div className="main">
         {(PHOTO[e.s] || bench) ? (
           <div className="stage" style={{ height: 620 }}>
-            {view === 'photo' && PHOTO[e.s] ? <img className="fill" src={photo(e.s)} alt={PHOTO[e.s][1]} /> : <GL><SampleStage el={e.s} T={298} label={`3D view of ${e.name}`} /></GL>}
+            {view === 'photo' && PHOTO[e.s] ? <img className="fill" src={photo(e.s)} alt={PHOTO[e.s].alt} /> : <GL><SampleStage el={e.s} T={298} label={`3D view of ${e.name}`} /></GL>}
             {PHOTO[e.s] && bench && <div className="seg float tl" role="group" aria-label="View"><button aria-pressed={view === 'photo'} onClick={() => setView('photo')}>Photo</button><button aria-pressed={view === '3d'} onClick={() => setView('3d')}>3D</button></div>}
-            {!PHOTO[e.s] && <span className="chip float tr">Colourless gas, {e.name.toLowerCase()}</span>}
+            {PHOTO[e.s]?.kind === 'glow' && view === '3d' && <span className="chip float tr">Colourless gas, {e.name.toLowerCase()}</span>}
+            {PHOTO[e.s]?.kind === 'related' && <span className="chip float tr">Not the pure element</span>}
           </div>
-        ) : <div className="stage plain" style={{ height: 420 }}><span className="giant">{e.s}</span><p>{predicted(e) ? 'Never seen in a visible amount.' : 'No sample picture for this element.'}</p></div>}
-        {PHOTO[e.s] && view === 'photo' && <a className="small" href={credit(e.s)}>Photo: images-of-elements.com, CC BY 3.0</a>}
+        ) : <div className="stage plain" style={{ height: 420 }}><span className="giant">{e.s}</span><p>No photograph: {noPhoto(e)}</p></div>}
+        {PHOTO[e.s] && view === 'photo' && <div className="caption"><span className="small">{PHOTO[e.s].alt}.</span><Credit s={e.s} /></div>}
         {view === '3d' && bench && <p className="small">Drag to turn, scroll to zoom. Modelled sample, not to scale.</p>}
       </div>
       <div className="main info">

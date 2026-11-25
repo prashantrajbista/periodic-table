@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BENCH, pairId, REACTIONS } from './chem/reactions.ts'
-import { BY, F, config, credit, ELEMENTS, FAMILIES, PHOTO, photo, predicted, tileMass, type Element } from './elements.tsx'
+import { BY, config, Credit, ELEMENTS, F, FAMILIES, PHOTO, photo, predicted, thumb, tileMass, type Element } from './elements.tsx'
 
 const RAMP = ['#EEF2F6', '#C3D3E4', '#8FAECE', '#456F9F', '#1D4F8C']
 type Key = 'en' | 'ie' | 'mp' | 'radius'
@@ -14,6 +14,8 @@ const PANEL = 'panel-hidden'
 const readPanel = () => { try { return localStorage.getItem(PANEL) !== '1' } catch { return true } }
 
 const unit = (v: number | null, u = '') => (v == null ? 'No value' : `${v}${u && ' ' + u}`)
+const NO_PHOTO: Record<string, string> = { Rn: 'no openly licensed picture of radon itself was found.', Fr: 'francium has never been collected in a visible amount.' }
+export const noPhoto = (e: Element) => NO_PHOTO[e.s] ?? 'too few atoms have ever been made to see.'
 export const facts = (e: Element): [string, string][] => [
   ['Atomic mass', e.mass], ['Configuration', config(e.config)], ['Oxidation states', e.ox || 'No value'], ['State at 298 K', e.state], ['Electronegativity', unit(e.en)],
   ['Ionisation energy', unit(e.ie, 'eV')], ['Electron affinity', unit(e.ea, 'eV')], ['Melting point', unit(e.mp, 'K')], ['Boiling point', unit(e.bp, 'K')], ['Density', unit(e.density, 'g/cm³')], ['Van der Waals radius', unit(e.radius, 'pm')], ['Discovered', e.year],
@@ -79,10 +81,10 @@ export function TablePage() {
               }
               const ph = st.view === 'samples' && PHOTO[x.s]
               return (
-                <button key={x.s} id={'el-' + x.s} className={'tile' + (ph ? ' photo' : '') + (plain ? ' plain' : '') + (st.family && st.family !== x.group ? ' dim' : '')} style={{ gridRow: x.row + 1, gridColumn: x.col + 1, background: bg || undefined, color: ink || undefined }} tabIndex={st.sel === x.s ? 0 : -1}
-                  aria-pressed={st.sel === x.s} aria-label={`${x.name}, ${x.z}, ${x.group.toLowerCase()}${isBench(x.s) ? ', on the bench' : ''}${trend ? `, ${v ?? 'no value'}` : ''}`} draggable={panel && isBench(x.s)}
+                <button key={x.s} id={'el-' + x.s} className={'tile' + (ph ? ' photo' : '') + (ph && PHOTO[x.s].kind === 'related' ? ' related' : '') + (plain ? ' plain' : '') + (st.family && st.family !== x.group ? ' dim' : '')} style={{ gridRow: x.row + 1, gridColumn: x.col + 1, background: bg || undefined, color: ink || undefined }} tabIndex={st.sel === x.s ? 0 : -1}
+                  aria-pressed={st.sel === x.s} aria-label={`${x.name}, ${x.z}, ${x.group.toLowerCase()}${ph && PHOTO[x.s].kind === 'related' ? ', picture is not the pure element' : ''}${isBench(x.s) ? ', on the bench' : ''}${trend ? `, ${v ?? 'no value'}` : ''}`} draggable={panel && isBench(x.s)}
                   onClick={() => up({ sel: x.s })} onDoubleClick={() => put(x.s)} onKeyDown={k => move(k, x)} onDragStart={d => d.dataTransfer.setData('text/plain', x.s)}>
-                  {ph && <img src={photo(x.s)} alt="" draggable={false} />}
+                  {ph && <img src={thumb(x.s)} alt="" draggable={false} loading="lazy" />}
                   <span className="z">{x.z}</span><span className="s">{x.s}</span>
                   {plain && <><span className={'n' + (x.name.length > 9 ? ' long' : '')}>{x.name}</span><span className="m">{tileMass(x)}</span></>}
                   {isBench(x.s) && <i className="dot" />}
@@ -92,7 +94,7 @@ export function TablePage() {
           </div>
         </div>
         {!panel && <div className="picked"><strong>{e.name}</strong><span>{e.z}</span><span>{e.group}</span><a href={`#/element/${e.s}`}>All properties</a><span className="muted">Show the panel to use the bench tray.</span></div>}
-        <div className="keys"><span><i className="dot" aria-hidden="true" /> On the bench: 14 elements with reactions</span>{st.view === 'samples' && <span>Photographs of the visible bench elements. Hydrogen, nitrogen and oxygen are colourless, so they have no picture.</span>}{plain && <span>Mass in square brackets: no standard atomic weight, so an isotope’s mass number is shown.</span>}{st.view === 'families' && <span>Families follow PubChem. Borderline cases differ between tables, and the heaviest elements are predicted.</span>}</div>
+        <div className="keys"><span><i className="dot" aria-hidden="true" /> On the bench: 14 elements with reactions</span>{st.view === 'samples' && <><span><i className="dashkey" aria-hidden="true" /> Dashed: shows its glow, ions, an alloy or an object, not the pure element</span><span>Colourless gases are shown glowing in an electric discharge. {Object.keys(PHOTO).length} of 118 have a photograph; the rest have no real one we could use.</span></>}{plain && <span>Mass in square brackets: no standard atomic weight, so an isotope’s mass number is shown.</span>}{st.view === 'families' && <span>Families follow PubChem. Borderline cases differ between tables, and the heaviest elements are predicted.</span>}</div>
       </main>
       {panel && <aside className="side" id="side-panel" aria-label="Bench tray and selected element">
         <section className={'card tray' + (over ? ' over' : '')} aria-label="Bench tray" onDragOver={x => { x.preventDefault(); setOver(true) }} onDragLeave={() => setOver(false)} onDrop={x => { x.preventDefault(); setOver(false); put(x.dataTransfer.getData('text/plain')) }}>
@@ -105,7 +107,7 @@ export function TablePage() {
           </div>
         </section>
         <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
-          {PHOTO[e.s] && <img className="hero" src={photo(e.s)} alt={PHOTO[e.s][1]} />}
+          {PHOTO[e.s] && <img className="hero" src={photo(e.s)} alt={PHOTO[e.s].alt} />}
           <div className="pad">
             <div className="name"><span className="sym">{e.s}</span><h1>{e.name}</h1><span className="num">{e.z}</span></div>
             <div className="fam"><i style={{ background: FAMILIES[e.group].color }} />{e.group}</div>
@@ -115,7 +117,7 @@ export function TablePage() {
               {isBench(e.s) && <button className="btn dark" onClick={() => put(e.s)}>Add to bench</button>}
               <a className="btn line" href={`#/element/${e.s}`}>All properties</a>
             </div>
-            {PHOTO[e.s] && <a className="small" href={credit(e.s)}>Photo: images-of-elements.com, CC BY 3.0</a>}
+            {PHOTO[e.s] ? <div className="caption"><span className="small">{PHOTO[e.s].alt}.</span><Credit s={e.s} /></div> : <p className="small">No photograph: {noPhoto(e)}</p>}
           </div>
         </section>
       </aside>}

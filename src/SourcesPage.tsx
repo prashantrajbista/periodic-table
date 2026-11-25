@@ -1,4 +1,4 @@
-import { BY, credit, PHOTO, photo } from './elements.tsx'
+import { BY, PHOTO, thumb } from './elements.tsx'
 export const SourcesPage = () => (
   <main className="cols">
     <div className="main">
@@ -18,10 +18,10 @@ export const SourcesPage = () => (
         <li>Flame colours follow an emission wavelength or a glowing temperature. Shapes of flame and smoke are modelled for looks.</li>
       </ul>
     </div>
-    <div className="main">
+    <div className="main" style={{ flexBasis: '100%' }}>
       <h2>Element photographs</h2>
-      <p>From <a href="https://images-of-elements.com/">images-of-elements.com</a> under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Resized.</p>
-      <div className="photos">{Object.keys(PHOTO).map(s => <a key={s} href={credit(s)}><img src={photo(s)} alt="" /><span>{BY[s].name}</span></a>)}</div>
+      <p>{Object.keys(PHOTO).length} photographs, each under its own licence. All are resized, and some are cropped to fit. Resized copies of share-alike pictures stay under the same licence.</p>
+      <div className="photos">{Object.keys(PHOTO).map(s => <div key={s}><img src={thumb(s)} alt="" loading="lazy" /><strong>{BY[s].name}</strong><span className="small"><a href={PHOTO[s].page}>{PHOTO[s].by}</a>, {PHOTO[s].licUrl ? <a href={PHOTO[s].licUrl}>{PHOTO[s].lic}</a> : PHOTO[s].lic}</span></div>)}</div>
     </div>
   </main>
 )

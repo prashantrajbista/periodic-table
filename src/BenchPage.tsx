@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { reaction } from './chem/thermo.ts'
 import { atoms, BENCH, conversion, outcome, pairId, REACTIONS, run, sub, type Look, type Outcome } from './chem/reactions.ts'
 import { build } from './chem/structures.ts'
-import { BY, F, PHOTO, photo, pretty, signed, sup } from './elements.tsx'
+import { BY, F, PHOTO, thumb, pretty, signed, sup } from './elements.tsx'
 import { Atoms, GL, Stage } from './gl.tsx'
 import { ConversionChart, GibbsChart, Profile } from './Charts.tsx'
 
@@ -116,8 +116,8 @@ export function BenchPage({ start }: { start: string[] }) {
           <div className="between"><h2>Drag into the vessel</h2><span className="muted small">Or press an element to add it</span></div>
           <div className="dockgrid">
             {BENCH.map(s => (
-              <button key={s} className={'tile' + (PHOTO[s] ? ' photo' : '')} draggable aria-label={`Add ${BY[s].name}`} aria-pressed={jar.includes(s)} onClick={() => add(s)} onDragStart={e => e.dataTransfer.setData('text/plain', s)}>
-                {PHOTO[s] && <img src={photo(s)} alt="" draggable={false} />}<span className="s">{s}</span>
+              <button key={s} className={'tile' + (PHOTO[s].kind === 'element' ? ' photo' : '')} draggable aria-label={`Add ${BY[s].name}`} aria-pressed={jar.includes(s)} onClick={() => add(s)} onDragStart={e => e.dataTransfer.setData('text/plain', s)}>
+                {PHOTO[s].kind === 'element' && <img src={thumb(s)} alt="" draggable={false} />}<span className="s">{s}</span>
               </button>
             ))}
           </div>

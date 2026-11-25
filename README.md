@@ -17,6 +17,6 @@ for every record.
 ## Third-party material
 
 - NASA CEA thermodynamic data: Apache 2.0, see `licenses/`
-- Element photographs: images-of-elements.com, CC BY 3.0, resized
+- Element photographs: 98, credited one by one in `src/data/photos.json` and on the Sources page (mostly images-of-elements.com, CC BY 3.0; the rest Wikimedia Commons under CC BY, CC BY-SA, Free Art License or public domain). Elements with only artist's impressions are left without a picture.
 - Studio lighting: Poly Haven "Studio Small 09", CC0
 - Element properties: PubChem. **Confirm reuse terms before public release.**

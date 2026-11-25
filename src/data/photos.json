@@ -1,0 +1,884 @@
+{
+"H": {
+"alt": "Hydrogen glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/hydrogen.php",
+"file": "hydrogen"
+},
+"He": {
+"alt": "Helium glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/helium.php",
+"file": "helium"
+},
+"Li": {
+"alt": "Lithium under argon, 0.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/lithium.php",
+"file": "lithium"
+},
+"Be": {
+"alt": "Pure beryllium bead, 2.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/beryllium.php",
+"file": "beryllium"
+},
+"B": {
+"alt": "Pure crystalline boron",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/boron.php",
+"file": "boron"
+},
+"C": {
+"alt": "Ultrapure carbon as graphite",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/carbon.php",
+"file": "carbon"
+},
+"N": {
+"alt": "Nitrogen glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/nitrogen.php",
+"file": "nitrogen"
+},
+"O": {
+"alt": "Oxygen glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/oxygen.php",
+"file": "oxygen"
+},
+"F": {
+"alt": "Pale yellow liquid fluorine in a tube inside a cryogenic bath",
+"kind": "element",
+"by": "Prof B. G. Mueller, derivative by TCO",
+"lic": "CC BY-SA 3.0",
+"licUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Liquid_fluorine_tighter_crop.jpg",
+"file": "fluorine"
+},
+"Ne": {
+"alt": "Neon glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/neon.php",
+"file": "neon"
+},
+"Na": {
+"alt": "Sodium metal kept under oil in a glass vial",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/sodium.php",
+"file": "sodium"
+},
+"Mg": {
+"alt": "Magnesium crystals",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/magnesium.php",
+"file": "magnesium"
+},
+"Al": {
+"alt": "Crumpled aluminium foil",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/aluminium.php",
+"file": "aluminium"
+},
+"Si": {
+"alt": "Ultrapure silicon chunks",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/silicon.php",
+"file": "silicon"
+},
+"P": {
+"alt": "Two pieces of ultrapure purple phosphorus",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/phosphorus.php",
+"file": "phosphorus"
+},
+"S": {
+"alt": "Yellow sulfur crystals",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/sulfur.php",
+"file": "sulfur"
+},
+"Cl": {
+"alt": "Yellow liquefied chlorine in a sealed glass ampoule",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/chlorine.php",
+"file": "chlorine"
+},
+"Ar": {
+"alt": "Argon glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/argon.php",
+"file": "argon"
+},
+"K": {
+"alt": "Potassium pearls under paraffin oil",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/potassium.php",
+"file": "potassium"
+},
+"Ca": {
+"alt": "Calcium pieces, 0.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/calcium.php",
+"file": "calcium"
+},
+"Sc": {
+"alt": "Ultrapure crystalline scandium, 5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/scandium.php",
+"file": "scandium"
+},
+"Ti": {
+"alt": "Titanium crystal made with the van Arkel–de Boer process, 87 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/titanium.php",
+"file": "titanium"
+},
+"V": {
+"alt": "Vanadium pieces with a coloured oxide layer",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/vanadium.php",
+"file": "vanadium"
+},
+"Cr": {
+"alt": "Pure chromium piece, about 20 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/chromium.php",
+"file": "chromium"
+},
+"Mn": {
+"alt": "Manganese chips with crystals on one side, surface oxidised",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/manganese.php",
+"file": "manganese"
+},
+"Fe": {
+"alt": "Pieces of iron",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/iron.php",
+"file": "iron"
+},
+"Co": {
+"alt": "Fractions from a cobalt cathode, 7 and 4 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/cobalt.php",
+"file": "cobalt"
+},
+"Ni": {
+"alt": "Pure nickel button, obtained by electrolysis, about 20 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/nickel.php",
+"file": "nickel"
+},
+"Cu": {
+"alt": "Native copper nugget",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/copper.php",
+"file": "copper"
+},
+"Zn": {
+"alt": "Zinc bead, 30 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/zinc.php",
+"file": "zinc"
+},
+"Ga": {
+"alt": "Gallium changing from liquid to solid",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/gallium.php",
+"file": "gallium"
+},
+"Ge": {
+"alt": "Ultrapure chunk of polycrystalline germanium, 12 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/germanium.php",
+"file": "germanium"
+},
+"As": {
+"alt": "Metallic arsenic under argon",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/arsenic.php",
+"file": "arsenic"
+},
+"Se": {
+"alt": "Black, amorphous selenium",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/selenium.php",
+"file": "selenium"
+},
+"Br": {
+"alt": "Bromine liquid and vapour in a sealed ampoule",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/bromine.php",
+"file": "bromine"
+},
+"Kr": {
+"alt": "Krypton glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/krypton.php",
+"file": "krypton"
+},
+"Rb": {
+"alt": "Rubidium metal in a sealed ampoule, 1 gram",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/rubidium.php",
+"file": "rubidium"
+},
+"Sr": {
+"alt": "Strontium with a dark nitride layer, stored under paraffin oil",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/strontium.php",
+"file": "strontium"
+},
+"Y": {
+"alt": "Ultrapure yttrium crystal",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/yttrium.php",
+"file": "yttrium"
+},
+"Zr": {
+"alt": "Two pieces of ultrapure zirconium, together 2.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/zirconium.php",
+"file": "zirconium"
+},
+"Nb": {
+"alt": "Niobium bead, slightly oxidised",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/niobium.php",
+"file": "niobium"
+},
+"Mo": {
+"alt": "Pure molybdenum crystal, slightly oxidised",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/molybdenum.php",
+"file": "molybdenum"
+},
+"Tc": {
+"alt": "Gold foil covered with technetium-99, sealed in glass under argon",
+"kind": "element",
+"by": "Marco Cardin",
+"lic": "CC BY-SA 4.0",
+"licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"page": "https://commons.wikimedia.org/wiki/File:Technetium-sample.jpg",
+"file": "technetium"
+},
+"Ru": {
+"alt": "Pure etched ruthenium, 1.8 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/ruthenium.php",
+"file": "ruthenium"
+},
+"Rh": {
+"alt": "Rhodium as powder, pressed cylinder and remelted pellet",
+"kind": "element",
+"by": "Alchemist-hp (pse-mendelejew.de), derivative by Purpy Pupple",
+"lic": "CC BY-SA 3.0 de",
+"licUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+"page": "https://commons.wikimedia.org/wiki/File:Rhodium_powder_pressed_melted.jpg",
+"file": "rhodium"
+},
+"Pd": {
+"alt": "Palladium crystal, about 1 gram",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/palladium.php",
+"file": "palladium"
+},
+"Ag": {
+"alt": "A piece of pure silver, about 1 gram",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/silver.php",
+"file": "silver"
+},
+"Cd": {
+"alt": "Pure cadmium",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/cadmium.php",
+"file": "cadmium"
+},
+"In": {
+"alt": "Ingot of 40 grams of indium",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/indium.php",
+"file": "indium"
+},
+"Sn": {
+"alt": "Ultrapure tin blob",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/tin.php",
+"file": "tin"
+},
+"Sb": {
+"alt": "Metallic antimony piece",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/antimony.php",
+"file": "antimony"
+},
+"Te": {
+"alt": "Metallic tellurium",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/tellurium.php",
+"file": "tellurium"
+},
+"I": {
+"alt": "Iodine crystals",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/iodine.php",
+"file": "iodine"
+},
+"Xe": {
+"alt": "Xenon glowing in an electric discharge. It is colourless at rest",
+"kind": "glow",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/xenon.php",
+"file": "xenon"
+},
+"Cs": {
+"alt": "Caesium metal crystals in a sealed ampoule",
+"kind": "element",
+"by": "Dnn87",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:CsCryst.JPG",
+"file": "caesium"
+},
+"Ba": {
+"alt": "Barium with a grey oxide layer under argon",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/barium.php",
+"file": "barium"
+},
+"La": {
+"alt": "Pure lanthanum, 1.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/lanthanum.php",
+"file": "lanthanum"
+},
+"Ce": {
+"alt": "Ultrapure cerium under argon, 1.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/cerium.php",
+"file": "cerium"
+},
+"Pr": {
+"alt": "Ultrapure praseodymium pieces under argon, 1.5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/praseodymium.php",
+"file": "praseodymium"
+},
+"Nd": {
+"alt": "Ultrapure neodymium under argon, 5 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/neodymium.php",
+"file": "neodymium"
+},
+"Pm": {
+"alt": "Button of promethium-147 metal, one of the first two made",
+"kind": "element",
+"by": "E. J. Wheelwright",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Promethium_Metal_Buttons_(cropped).png",
+"file": "promethium"
+},
+"Sm": {
+"alt": "Ultrapure sublimated samarium, 2 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/samarium.php",
+"file": "samarium"
+},
+"Eu": {
+"alt": "Strongly oxidised piece of europium",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/europium.php",
+"file": "europium"
+},
+"Gd": {
+"alt": "Ultrapure amorphous gadolinium, 12 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/gadolinium.php",
+"file": "gadolinium"
+},
+"Tb": {
+"alt": "Pure terbium, 3 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/terbium.php",
+"file": "terbium"
+},
+"Dy": {
+"alt": "Ultrapure dysprosium dendrites",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/dysprosium.php",
+"file": "dysprosium"
+},
+"Ho": {
+"alt": "Ultrapure holmium, 17 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/holmium.php",
+"file": "holmium"
+},
+"Er": {
+"alt": "Ultrapure erbium with cut traces, 25 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/erbium.php",
+"file": "erbium"
+},
+"Tm": {
+"alt": "Ultrapure crystalline thulium, 22.3 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/thulium.php",
+"file": "thulium"
+},
+"Yb": {
+"alt": "Ultrapure ytterbium, 2 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/ytterbium.php",
+"file": "ytterbium"
+},
+"Lu": {
+"alt": "Ultrapure piece of lutetium, 3 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/lutetium.php",
+"file": "lutetium"
+},
+"Hf": {
+"alt": "Electrolytic hafnium, 22 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/hafnium.php",
+"file": "hafnium"
+},
+"Ta": {
+"alt": "Tantalum pieces, 20 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/tantalum.php",
+"file": "tantalum"
+},
+"W": {
+"alt": "Tungsten rod with oxidised surface, 80 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/tungsten.php",
+"file": "tungsten"
+},
+"Re": {
+"alt": "Pure rhenium bead, arc melted, 21 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/rhenium.php",
+"file": "rhenium"
+},
+"Os": {
+"alt": "Pure osmium bead, about 4 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/osmium.php",
+"file": "osmium"
+},
+"Ir": {
+"alt": "Pieces of pure iridium, 1 gram",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/iridium.php",
+"file": "iridium"
+},
+"Pt": {
+"alt": "Two platinum crystals, about 1 cm each",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/platinum.php",
+"file": "platinum"
+},
+"Au": {
+"alt": "Ultrapure gold leaves",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/gold.php",
+"file": "gold"
+},
+"Hg": {
+"alt": "Liquid mercury in a dish",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/mercury.php",
+"file": "mercury"
+},
+"Tl": {
+"alt": "Thallium under argon, 8 grams",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/thallium.php",
+"file": "thallium"
+},
+"Pb": {
+"alt": "Lead bead",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/lead.php",
+"file": "lead"
+},
+"Bi": {
+"alt": "Bismuth crystal, slightly oxidised",
+"kind": "element",
+"by": "images-of-elements.com",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0/",
+"page": "https://images-of-elements.com/bismuth.php",
+"file": "bismuth"
+},
+"Po": {
+"alt": "Spark plugs and static eliminators with radioactive polonium, in a museum",
+"kind": "related",
+"by": "Maksym Kozlenko",
+"lic": "CC BY-SA 4.0",
+"licUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"page": "https://commons.wikimedia.org/wiki/File:2019-11-22_Spark_plugs_and_static_eliminators_with_radioactive_polonium_at_museum_display.jpg",
+"file": "polonium"
+},
+"At": {
+"alt": "Blue glow caused by about 40 nanograms of astatine-211. The astatine itself is too little to see",
+"kind": "related",
+"by": "NuclearAlex",
+"lic": "CC BY 4.0",
+"licUrl": "https://creativecommons.org/licenses/by/4.0",
+"page": "https://commons.wikimedia.org/wiki/File:Glow_from_a_sample_of_astatine_(cropped).jpg",
+"file": "astatine"
+},
+"Ra": {
+"alt": "Radium plated on copper foil under a clear coating",
+"kind": "element",
+"by": "grenadier",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Radium226.jpg",
+"file": "radium"
+},
+"Ac": {
+"alt": "Blue glow of air around actinium-225 in a vial. The actinium itself is too little to see",
+"kind": "related",
+"by": "Oak Ridge National Laboratory",
+"lic": "CC BY 2.0",
+"licUrl": "https://creativecommons.org/licenses/by/2.0",
+"page": "https://commons.wikimedia.org/wiki/File:Actinium_sample_(31481701837).png",
+"file": "actinium"
+},
+"Th": {
+"alt": "Thin thorium sheet under argon in a glass ampoule",
+"kind": "element",
+"by": "Alchemist-hp (pse-mendelejew.de)",
+"lic": "Free Art License",
+"licUrl": "http://artlibre.org/licence/lal/en",
+"page": "https://commons.wikimedia.org/wiki/File:Thorium_sample_0.1g.jpg",
+"file": "thorium"
+},
+"Pa": {
+"alt": "Protactinium-233, the dark circle, photographed by its own radiation",
+"kind": "element",
+"by": "US Department of Energy",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Protactinium-233.jpg",
+"file": "protactinium"
+},
+"U": {
+"alt": "One gram of depleted uranium metal in an ampoule under argon",
+"kind": "element",
+"by": "范皓程",
+"lic": "CC BY 4.0",
+"licUrl": "https://creativecommons.org/licenses/by/4.0",
+"page": "https://commons.wikimedia.org/wiki/File:Depleted_Uranium.jpg",
+"file": "uranium"
+},
+"Np": {
+"alt": "Neptunium-237 sphere, 6 kg",
+"kind": "element",
+"by": "Los Alamos National Laboratory",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Neptunium2.jpg",
+"file": "neptunium"
+},
+"Pu": {
+"alt": "Ring of 99.96 percent plutonium, about 11 cm across",
+"kind": "element",
+"by": "Los Alamos National Laboratory",
+"lic": "Attribution required",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Plutonium_ring.jpg",
+"file": "plutonium"
+},
+"Am": {
+"alt": "Small disc of americium-241 under a microscope",
+"kind": "element",
+"by": "Bionerd",
+"lic": "CC BY 3.0",
+"licUrl": "https://creativecommons.org/licenses/by/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Americium_microscope.jpg",
+"file": "americium"
+},
+"Cm": {
+"alt": "Orange laser-induced glow of curium(III) ions in solution, not the metal",
+"kind": "related",
+"by": "Eschenmoser and colleagues",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Cm-Fluoreszenz.png",
+"file": "curium"
+},
+"Bk": {
+"alt": "First visible lump of berkelium, 0.1 mm across, under a microscope",
+"kind": "element",
+"by": "Oak Ridge National Laboratory, US Department of Energy",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Berkelium_metal.jpg",
+"file": "berkelium"
+},
+"Cf": {
+"alt": "Disc of californium metal, about 1 mm across",
+"kind": "element",
+"by": "US Department of Energy",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Californium.jpg",
+"file": "californium"
+},
+"Es": {
+"alt": "About 300 micrograms of einsteinium-253 lighting up its quartz vial",
+"kind": "element",
+"by": "R. G. Haire, US Department of Energy, touched up by Materialscientist",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Einsteinium.jpg",
+"file": "einsteinium"
+},
+"Fm": {
+"alt": "Ytterbium alloy holding a trace of fermium. Pure fermium metal has never been made",
+"kind": "related",
+"by": "Ben E. Lewis",
+"lic": "Public domain",
+"licUrl": "",
+"page": "https://commons.wikimedia.org/wiki/File:Fermium-Ytterbium_Alloy.jpg",
+"file": "fermium"
+}
+}

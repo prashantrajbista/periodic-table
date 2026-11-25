@@ -101,3 +101,15 @@ test('families cover every element, f block included', async () => {
   assert.deepEqual(of('Alkali metal'), [3, 11, 19, 37, 55, 87]); assert.deepEqual(of('Alkaline earth metal'), [4, 12, 20, 38, 56, 88])
   assert.equal(new Set(data.map(e => e.group)).size, 10)
 })
+
+test('every photo has a file, thumbnail, credit and licence', async () => {
+  const { existsSync } = await import('node:fs')
+  const ph = (await import('../data/photos.json', { with: { type: 'json' } })).default as Record<string, { alt: string; kind: string; by: string; lic: string; licUrl: string; page: string; file: string }>
+  assert.equal(Object.keys(ph).length, 98)
+  for (const [s, p] of Object.entries(ph)) {
+    assert.ok(existsSync(`public/photos/${p.file}.jpg`) && existsSync(`public/photos/t/${p.file}.jpg`), s)
+    assert.ok(p.alt && p.by && p.page.startsWith('https://') && ['element', 'glow', 'related'].includes(p.kind), s)
+    assert.ok(p.licUrl.startsWith('http') || /Public domain|Attribution/.test(p.lic), s + ' licence')
+  }
+  for (const s of ['Rn', 'Fr', 'Md', 'Og']) assert.ok(!(s in ph), s + ' has no real sample photo')
+})
