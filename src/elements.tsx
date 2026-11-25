@@ -24,6 +24,17 @@ export const PHOTO: Record<string, [string, string]> = {
 export const photo = (s: string) => `./photos/${PHOTO[s][0]}.jpg`
 export const credit = (s: string) => `https://images-of-elements.com/${PHOTO[s][0]}.php`
 
+/** Families in reading order, with tile colours that all carry dark text. */
+export const FAMILIES: Record<string, { plural: string; color: string }> = {
+  'Alkali metal': { plural: 'Alkali metals', color: '#EFA08A' }, 'Alkaline earth metal': { plural: 'Alkaline earth metals', color: '#F3C58B' },
+  Lanthanide: { plural: 'Lanthanides', color: '#DDBDE9' }, Actinide: { plural: 'Actinides', color: '#B59BD6' }, 'Transition metal': { plural: 'Transition metals', color: '#A9C4E4' },
+  'Post-transition metal': { plural: 'Post-transition metals', color: '#9FD0CF' }, Metalloid: { plural: 'Metalloids', color: '#B9CE9A' }, Nonmetal: { plural: 'Nonmetals', color: '#F4E59A' },
+  Halogen: { plural: 'Halogens', color: '#86C58B' }, 'Noble gas': { plural: 'Noble gases', color: '#C5C9D8' },
+}
+/** Elements with no standard atomic weight show the mass number of a long-lived isotope in brackets. */
+const NO_WEIGHT = (z: number) => z === 43 || z === 61 || (z >= 84 && z <= 89) || z >= 93
+export const tileMass = (e: Element) => (NO_WEIGHT(e.z) ? `[${Math.round(+e.mass)}]` : e.mass.length > 6 ? (+e.mass).toFixed(3) : e.mass)
+
 const SUP: Record<string, string> = { 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹', '-': '⁻' }
 export const sup = (n: number | string) => String(n).split('').map(c => SUP[c] ?? c).join('')
 /** "[Ne]3s2 3p5" to "[Ne] 3s² 3p⁵" */

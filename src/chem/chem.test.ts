@@ -92,3 +92,12 @@ test('atom positions give real bond lengths', () => {
   near(d(MOLS.S8.m, 0, 1), 2.06, 0.01); near(d(MOLS.NH3.m, 0, 1), 1.012, 0.001); near(d(MOLS.Al2Br6.m, 0, 2), 2.41, 0.02); near(d(MOLS.Al2Br6.m, 0, 4), 2.23, 0.03)
   for (const r of all) for (const c of [r.cells.before, r.cells.after]) assert.ok(build(c).atoms.length > 10, r.id)
 })
+
+test('families cover every element, f block included', async () => {
+  const data = (await import('../data/elements.json', { with: { type: 'json' } })).default as { z: number; group: string }[]
+  const of = (g: string) => data.filter(e => e.group === g).map(e => e.z)
+  assert.deepEqual(of('Lanthanide'), Array.from({ length: 15 }, (_, i) => 57 + i))
+  assert.deepEqual(of('Actinide'), Array.from({ length: 15 }, (_, i) => 89 + i))
+  assert.deepEqual(of('Alkali metal'), [3, 11, 19, 37, 55, 87]); assert.deepEqual(of('Alkaline earth metal'), [4, 12, 20, 38, 56, 88])
+  assert.equal(new Set(data.map(e => e.group)).size, 10)
+})

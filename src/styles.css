@@ -38,8 +38,17 @@ nav a[aria-current] { font-weight: 600; border-color: var(--ink) }
 .seg button { min-height: 44px; padding: 0 14px; border: 0; border-radius: 4px; background: none; cursor: pointer } .seg button[aria-pressed=true] { background: #fff; font-weight: 600 }
 .seg.float { background: var(--paper) } .seg.float button[aria-pressed=true] { background: var(--ink); color: #fff }
 .legend { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums } .legend > span:nth-child(2) { display: flex } .legend i { width: 26px; height: 12px }
-.scroll { overflow-x: auto; padding: 4px; margin: -4px }
-.ptable { display: grid; grid-template-columns: repeat(18, minmax(46px, 1fr)); grid-template-rows: repeat(7, 66px) 14px repeat(2, 66px); gap: 4px; min-width: 896px }
+.scroll { position: relative; overflow-x: auto; padding: 4px; margin: -4px }
+.ptable { display: grid; grid-template-columns: 20px repeat(18, minmax(46px, 1fr)); grid-template-rows: 20px repeat(7, 66px) 14px repeat(2, 66px); gap: 4px; min-width: 920px }
+.gp { display: grid; place-items: center; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums }
+.slotref { display: grid; place-items: center; border-radius: 3px; border: 1.5px dashed #5E6973; font-size: 12px }
+.rowname { display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-weight: 600 }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%) }
+.fams { display: flex; flex-wrap: wrap; gap: 4px } .fams button { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border: 0; border-radius: 4px; background: none; cursor: pointer } .fams button:hover { background: #CBD1D6 } .fams button[aria-pressed=true] { background: var(--ink); color: #fff } .fams button span { font-size: 13px; opacity: .8; font-variant-numeric: tabular-nums }
+.fams i, .fam i { width: 16px; height: 16px; border-radius: 3px; box-shadow: inset 0 0 0 1px rgb(23 28 33 / .45) } .fam { display: flex; align-items: center; gap: 8px; color: var(--muted) }
+.panelbtn { margin-left: auto } .picked { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; min-height: 24px }
+.tile.dim { opacity: .3 } .tile .n.long { font-size: 10px; letter-spacing: -.04em; right: 0 } .tile.plain { container-type: inline-size } .tile.plain .s { top: 15px; bottom: auto } .tile .n, .tile .m { position: absolute; left: 6px; right: 2px; font-size: 11px; line-height: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums } .tile .m { bottom: 3px } .tile .n { top: 36px; letter-spacing: -.02em; display: none }
+@container (min-width: 62px) { .tile .n { display: block } }
 .tile { position: relative; padding: 0; border: 0; border-radius: 3px; overflow: hidden; background: var(--paper); text-align: left; cursor: pointer }
 .tile[draggable=true] { cursor: grab }
 .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
