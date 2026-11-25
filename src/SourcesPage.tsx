@@ -5,7 +5,7 @@ export const SourcesPage = () => (
       <h1>Sources</h1>
       <dl className="src">
         <dt>Reaction thermodynamics</dt><dd><a href="https://github.com/nasa/cea">NASA CEA thermodynamic database</a>, Apache 2.0</dd>
-        <dt>Element properties</dt><dd><a href="https://pubchem.ncbi.nlm.nih.gov/periodic-table/">PubChem periodic table</a>. Reuse terms to be confirmed before public release.</dd>
+        <dt>Element properties</dt><dd><a href="https://pubchem.ncbi.nlm.nih.gov/periodic-table/">PubChem periodic table</a>. <a href="https://www.ncbi.nlm.nih.gov/home/about/policies/">NCBI</a> places no restrictions of its own on the data; original contributors may hold rights.</dd>
         <dt>Emission lines</dt><dd><a href="https://www.nist.gov/pml/atomic-spectra-database">NIST Atomic Spectra Database</a>, wavelengths only</dd>
         <dt>Crystal cells and molecules</dt><dd>Published unit cells and gas-phase geometries; radii are metallic, Shannon ionic or van der Waals as captioned</dd>
         <dt>Studio lighting</dt><dd><a href="https://polyhaven.com/a/studio_small_09">Poly Haven, Studio Small 09</a>, CC0</dd>

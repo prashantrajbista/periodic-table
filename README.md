@@ -1,5 +1,7 @@
 # Interactive 3D periodic table
 
+Live: https://prashantrajbista.github.io/periodic-table/
+
 118 elements, a photoreal bench you drag elements into, and live thermodynamics for 12 element + element cases. University level.
 
     npm install
@@ -19,4 +21,4 @@ for every record.
 - NASA CEA thermodynamic data: Apache 2.0, see `licenses/`
 - Element photographs: 98, credited one by one in `src/data/photos.json` and on the Sources page (mostly images-of-elements.com, CC BY 3.0; the rest Wikimedia Commons under CC BY, CC BY-SA, Free Art License or public domain). Elements with only artist's impressions are left without a picture.
 - Studio lighting: Poly Haven "Studio Small 09", CC0
-- Element properties: PubChem. **Confirm reuse terms before public release.**
+- Element properties: PubChem. NCBI places no restrictions of its own on the data; original contributors may hold rights.
