@@ -1,0 +1,80 @@
+:root { --ground: #DDE1E4; --paper: #F6F7F8; --ink: #171C21; --muted: #414B54; --line: #B4BCC3; --run: #F2A900; --fav: #1D4F8C; --unf: #8A3A00; --sans: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif; --serif: 'STIX Two Text', 'Times New Roman', serif; color-scheme: light }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 15px/1.45 var(--sans) }
+h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0 }
+h1 { font-size: 30px; line-height: 1.15; font-weight: 600; text-wrap: balance }
+h2 { font-size: 18px; font-weight: 600 }
+h3 { font-size: 15px; font-weight: 600; margin-top: 14px }
+a { color: var(--ink) } a:hover { color: var(--fav) }
+button, input { font: inherit; color: inherit }
+:is(button, a, input):focus-visible { outline: 3px solid var(--fav); outline-offset: 2px }
+input[type=range] { width: 100%; height: 44px; margin: 0; accent-color: var(--ink) }
+input[type=number] { width: 100%; min-height: 44px; padding: 0 12px; border: 1.5px solid #5E6973; border-radius: 4px; background: #fff }
+.app { padding: 0 max(32px, env(safe-area-inset-right)) 40px max(32px, env(safe-area-inset-left)); max-width: 1680px; margin: 0 auto }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px; padding: 16px 0 }
+.brand { font-size: 19px; font-weight: 600; text-decoration: none }
+nav { display: flex; gap: 8px }
+nav a { display: flex; align-items: center; min-height: 44px; padding: 0 14px; text-decoration: none; border-bottom: 3px solid transparent }
+nav a[aria-current] { font-weight: 600; border-color: var(--ink) }
+.cols { display: flex; flex-wrap: wrap; gap: 24px 28px; align-items: flex-start }
+.main { flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 16px }
+.bench .main { flex: 1.35 1 560px } .bench .info { flex: 1 1 440px } .elem .main { flex: 1 1 480px }
+.info { gap: 24px !important }
+.info > section:not(.card) { display: flex; flex-direction: column; gap: 10px }
+.side { flex: 1 1 332px; min-width: 0; display: flex; flex-direction: column; gap: 16px }
+.card { background: var(--paper); border-radius: 6px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px }
+.pad { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 14px }
+.hero { display: block; width: 100%; height: 190px; object-fit: cover }
+.muted { color: var(--muted) } .small { color: var(--muted); font-size: 14px } .serif { font-family: var(--serif) } sub, sup { font-size: .68em; line-height: 0 } .tn { font-variant-numeric: tabular-nums }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.between { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline }
+.between.big { font-size: 18px; font-weight: 600 }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 0; border-radius: 4px; background: none; cursor: pointer; text-decoration: none; font-weight: 500 }
+.btn.dark { background: var(--ink); color: #fff; font-weight: 600 } .btn.go { background: var(--run); color: var(--ink); font-weight: 600 } .btn.go:hover { background: #FFBC1F }
+.btn.line { box-shadow: inset 0 0 0 1.5px var(--ink) } .btn.paper { background: var(--paper) } .btn.paper[aria-pressed=true] { background: var(--ink); color: #fff }
+.btn.text { text-decoration: underline; padding: 0 8px } .btn.big { min-height: 48px; padding: 0 24px; font-size: 16px }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; min-height: 52px }
+.seg { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 6px; background: #CBD1D6 }
+.seg button { min-height: 44px; padding: 0 14px; border: 0; border-radius: 4px; background: none; cursor: pointer } .seg button[aria-pressed=true] { background: #fff; font-weight: 600 }
+.seg.float { background: var(--paper) } .seg.float button[aria-pressed=true] { background: var(--ink); color: #fff }
+.legend { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums } .legend > span:nth-child(2) { display: flex } .legend i { width: 26px; height: 12px }
+.scroll { overflow-x: auto; padding: 4px; margin: -4px }
+.ptable { display: grid; grid-template-columns: repeat(18, minmax(46px, 1fr)); grid-template-rows: repeat(7, 66px) 14px repeat(2, 66px); gap: 4px; min-width: 896px }
+.tile { position: relative; padding: 0; border: 0; border-radius: 3px; overflow: hidden; background: var(--paper); text-align: left; cursor: pointer }
+.tile[draggable=true] { cursor: grab }
+.tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.tile .s { position: absolute; left: 0; bottom: 0; padding: 1px 6px 2px; font-size: 17px; line-height: 1.15; font-weight: 600 } .tile .z { position: absolute; left: 0; top: 0; padding: 1px 6px; font-size: 11px; font-variant-numeric: tabular-nums }
+.tile.photo .s, .tile.photo .z { background: var(--paper) }
+.tile[aria-pressed=true] { box-shadow: 0 0 0 3px var(--ink) }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--run); box-shadow: 0 0 0 1.5px var(--ink) } .tile .dot { position: absolute; right: 5px; top: 5px }
+.keys { display: flex; flex-wrap: wrap; gap: 6px 24px; color: var(--muted); font-size: 14px } .keys span:first-child { display: flex; align-items: center; gap: 8px }
+.name { display: flex; align-items: baseline; gap: 12px } .name .sym { font: 500 40px/1 var(--serif) } .name h1 { font-size: 22px } .name .num { margin-left: auto; color: var(--muted) }
+.kv { display: flex; flex-direction: column; font-variant-numeric: tabular-nums } .kv > div { display: flex; justify-content: space-between; gap: 16px; padding: 6px 0 } .kv dt { color: var(--muted) } .kv dd { text-align: right; font-weight: 500 }
+.kv.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 0 32px } .kv.two > div { border-bottom: 1px solid var(--line); padding: 9px 0 }
+.slots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px } .slot { min-height: 56px; border-radius: 4px; border: 1.5px dashed #5E6973; display: grid; place-items: center; color: var(--muted) } .slot.full { border: 1.5px solid var(--ink); background: #E4E8EB; color: var(--ink); font: 30px var(--serif) }
+.tray.over, .stage.over { box-shadow: 0 0 0 4px var(--run) }
+.eq { font: 21px var(--serif) }
+.stage { position: relative; border-radius: 6px; overflow: hidden; background: #9b9fa3; touch-action: pan-y }
+.stage.plain { background: var(--paper); display: grid; place-content: center; justify-items: center; gap: 20px; color: var(--muted) }
+.fill { width: 100%; height: 100%; object-fit: cover; display: block }
+.nogl { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center }
+.float { position: absolute; z-index: 1 } .tl { left: 16px; top: 16px } .tr { right: 16px; top: 16px } .bot { left: 16px; right: 16px; bottom: 16px; display: flex; gap: 8px; justify-content: space-between; align-items: flex-end; pointer-events: none } .bot .row { justify-content: flex-end; flex: 0 0 auto } @media (max-width: 640px) { .bot { flex-wrap: wrap } } .bot > * { pointer-events: auto }
+.chip { padding: 6px 12px; border-radius: 4px; background: var(--paper) } .chip.serif { font-size: 18px } .chips { display: flex; flex-direction: column; gap: 6px; align-items: flex-end } .note { max-width: 440px; min-width: 0; padding: 8px 14px }
+.dock { padding: 14px 16px } .dock h2 { font-size: 16px } .dockgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(45px, 1fr)); gap: 6px } .dockgrid .tile { height: 56px; background: #D2D7DB }
+.eqn { font-size: 38px; font-weight: 500 } .eqn2 { font-size: 24px }
+.nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(112px, 100%), 1fr)); gap: 10px 16px; font-variant-numeric: tabular-nums } .nums dt { color: var(--muted); font-size: 14px } .nums dd { font-size: 19px; font-weight: 600 } .fav { color: var(--fav) } .unf { color: var(--unf) }
+.chart { width: 100%; height: auto; display: block } .chart text { font: 14px var(--sans); fill: var(--muted) } .chart .val { font-weight: 600; font-size: 16px; fill: var(--ink) }
+.chart .g { fill: none; stroke: var(--fav); stroke-width: 3 } .chart .g2 { fill: none; stroke: var(--unf); stroke-width: 3 } .chart .h { fill: none; stroke: #6C7781; stroke-width: 2; stroke-dasharray: 6 4 } .chart .pt { fill: var(--run); stroke: var(--ink); stroke-width: 2 }
+.chartkey { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 14px } .chartkey span { display: flex; align-items: center; gap: 8px } .chartkey i { width: 24px; height: 0; border-top: 3px solid var(--fav) } .chartkey .kh { border-top: 2px dashed #6C7781 } .chartkey .kg2 { border-color: var(--unf) }
+.amts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 12px 24px } .amts > div { display: flex; flex-direction: column; gap: 4px }
+.amts + .kv > div { border-bottom: 1px solid var(--line); padding: 8px 0 }
+.comp { display: flex; flex-direction: column; gap: 8px } .comp > div { display: grid; grid-template-columns: 58px minmax(0, 1fr) 96px; gap: 12px; align-items: center } .comp .serif { font-size: 18px } .comp .tn { text-align: right } .track { height: 16px; background: #CBD1D6 } .track i { display: block; height: 100%; background: #6C7781 } .track .prod { background: var(--fav) }
+.rxs { list-style: none; display: flex; flex-direction: column } .rxs li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 8px 0 } .rxs li + li { border-top: 1px solid #D5DADE } .rxs .serif { font-size: 20px }
+.ehead { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 20px } .giant { font: 500 96px/.85 var(--serif); color: var(--ink) }
+.states { display: flex; height: 14px; border-radius: 3px; overflow: hidden }
+.orbs { display: flex; flex-wrap: wrap; gap: 14px } .boxes { display: flex; gap: 3px; margin-bottom: 4px } .boxes span { width: 30px; height: 34px; border: 1.5px solid var(--ink); display: grid; place-items: center; background: var(--paper); font: 18px var(--serif) } .boxes .hot { background: var(--run) }
+.spec { width: 100%; height: auto }
+.src dt { font-weight: 600; margin-top: 12px } ul.plain { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; max-width: 70ch }
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px } .photos a { display: flex; flex-direction: column; gap: 4px } .photos img { width: 100%; height: 96px; object-fit: cover; border-radius: 4px }
+@media (min-width: 1100px) { .bench > .main:first-child { position: sticky; top: 16px } }
+@media (max-width: 640px) { .app { padding-left: 16px; padding-right: 16px } .eqn { font-size: 28px } }

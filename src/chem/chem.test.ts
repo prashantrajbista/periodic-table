@@ -77,6 +77,7 @@ test('outcomes stay distinct', () => {
   assert.equal(o('H', 'N'), 'blocked'); assert.equal(o('H', 'N', { catalyst: true }), 'reacts')
   assert.equal(o('H', 'O', { started: false }), 'ready'); assert.equal(o('H', 'O', { started: false, catalyst: true }), 'reacts')
   assert.equal(o('N', 'O', { T: 1900 }), 'unfavourable'); assert.equal(o('N', 'O'), 'blocked')
+  assert.equal(outcome(['Na', 'Cl'], { T: 300, P: 1, started: true, catalyst: false }, { Na: 0, Cl2: 10 }), 'ready', 'zero amount is not unfavourable')
   assert.equal(o('Ne', 'Na'), 'inert'); assert.equal(o('Fe', 'Br'), 'unlisted')
   assert.equal(o('Hg', 'O', { T: 5000 }), 'range')
   for (const a of BENCH) for (const b of BENCH) if (a < b && !REACTIONS[pairId(a, b)]) assert.ok(['inert', 'unlisted'].includes(o(a, b)), a + b)

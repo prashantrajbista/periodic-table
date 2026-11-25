@@ -6,7 +6,7 @@ export const AS: Record<string, string> = { H: 'H2', N: 'N2', O: 'O2', Cl: 'Cl2'
 export const sub = (el: string) => AS[el] ?? el
 
 export type Look = {
-  vessel: 'jar' | 'steel' | 'crucible'
+  vessel: 'jar' | 'steel' | 'crucible' | 'none'
   spoon?: boolean
   electrodes?: boolean
   /** Lower the spoon into the liquid when the reaction starts. */
@@ -14,6 +14,7 @@ export type Look = {
   /** Light while reacting: an emission wavelength (nm) or a glowing temperature (K). */
   light?: { nm?: number; K?: number; power: number; tall: number }
   smoke?: number
+  flash?: boolean
 }
 export type Reaction = {
   id: string
@@ -53,9 +54,9 @@ const list: Reaction[] = [
     ox: 'Mg 0 to +2, O 0 to −2.',
     T: [300, 2000], P: [1, 1], start: { T: 300, P: 1 }, amounts: { Mg: 20, O2: 10 },
     gate: { label: 'Light the ribbon', spark: true, why: 'An oxide skin protects cold magnesium. It must be heated near its melting point.' },
-    see: { before: 'Grey magnesium ribbon in colourless oxygen.', during: 'Intense white light: solid MgO glowing near 3000 K. White smoke is MgO.', after: 'White magnesium oxide powder.' },
+    see: { before: 'Grey magnesium ribbon in colourless oxygen.', during: 'Intense white light from glowing MgO particles. White smoke is MgO.', after: 'White magnesium oxide powder.' },
     hazard: 'The light damages eyes. Burning magnesium cannot be put out with water or CO₂.',
-    look: { vessel: 'jar', spoon: true, light: { K: 3200, power: 1.8, tall: 0.7 }, smoke: 0.9 },
+    look: { vessel: 'jar', spoon: true, light: { K: 5600, power: 1.8, tall: 0.7 }, smoke: 0.9 },
     cells: { before: ['Mg', 'O2'], after: ['MgO'] },
   },
   {
@@ -75,7 +76,7 @@ const list: Reaction[] = [
     gate: { label: 'Spark', spark: true, catalyst: 'Platinum', why: 'Strongly favoured, yet nothing happens at room temperature. A spark or a platinum catalyst gets it over the barrier.' },
     see: { before: 'Two colourless gases. Nothing to see.', during: 'A near-colourless flash. Hydrogen flames emit little visible light.', after: 'Water droplets on the glass.' },
     hazard: 'This mixture explodes. Never confine it in glass.',
-    look: { vessel: 'jar', electrodes: true, light: { nm: 440, power: 0.35, tall: 1.3 } },
+    look: { vessel: 'jar', electrodes: true, light: { nm: 472, power: 0.22, tall: 1.3 }, flash: true },
     cells: { before: ['H2', 'O2'], after: ['H2O'] },
   },
   {
@@ -85,7 +86,7 @@ const list: Reaction[] = [
     gate: { label: 'Light the sulfur', spark: true, why: 'Sulfur must melt and reach its ignition temperature before it burns.' },
     see: { before: 'Yellow sulfur in colourless oxygen.', during: 'Melts, then burns with a blue flame.', after: 'Colourless sulfur dioxide. The jar looks empty.' },
     hazard: 'Sulfur dioxide is toxic and triggers asthma.',
-    look: { vessel: 'jar', spoon: true, light: { nm: 452, power: 0.5, tall: 0.9 }, smoke: 0.08 },
+    look: { vessel: 'jar', spoon: true, light: { nm: 466, power: 0.5, tall: 0.9 }, smoke: 0.08 },
     cells: { before: ['S8', 'O2'], after: ['SO2'] },
   },
   {
@@ -197,6 +198,7 @@ export function outcome(jar: string[], c: Control, amounts: Record<string, numbe
   if (!r) return 'unlisted'
   const after = c.T >= r.T[0] && c.T <= r.T[1] ? run(r, amounts, c.T, c.P) : null
   if (!after || !reaction(r.eq, c.T, c.P)) return 'range'
+  if (Object.keys(r.amounts).some(k => !(amounts[k] > 0))) return 'ready'
   if (!gateOpen(r, c)) return c.started ? 'blocked' : 'ready'
   return conversion(r, amounts, after) < 0.02 ? 'unfavourable' : 'reacts'
 }
